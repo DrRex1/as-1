@@ -102,6 +102,6 @@ const listingSchema = new mongoose.Schema({
   availability: availabilitySchema,
   review_scores: reviewScoresSchema,
   reviews: [reviewSchema],
-},{ collection: 'listingsAndReviews' }); // added here to preserve capital letters in collection name
+},{ collection: 'listingsAndReviews' }); 
 
 module.exports = listingSchema;

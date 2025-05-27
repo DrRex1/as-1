@@ -3,11 +3,11 @@ const listingSchema = require("./listingSchema");
 
 module.exports = class ListingsDB {
   constructor() {
-    // We don't have a `Listing` object until initialize() is complete
+    // We don't have a "Listing" object until initialize() is completed sucessfully.
     this.Listing = null;
   }
 
-  // Pass the connection string to `initialize()`
+  //  We are Passing the connection string to `initialize()`
   initialize(connectionString) {
     return new Promise((resolve, reject) => {
       const db = mongoose.createConnection(connectionString);

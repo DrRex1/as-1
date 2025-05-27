@@ -8,13 +8,13 @@
  *
  *  Name: Vishavjeet Khatri    Student ID: 150215234             Date: May-25-2025
  *
- *  Published URL: https://your-vercel-deployment.vercel.app
+ *  Published URL: https://web422-six.vercel.app/
  ********************************************************************************/
 
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const ListingsDB = require('./modules/listingsDB'); // class export
+const ListingsDB = require('./ListingAPI/listingsDB'); // class export
 const db = new ListingsDB(); // instantiate
 
 const app = express();
