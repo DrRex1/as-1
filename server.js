@@ -8,14 +8,17 @@
  *
  *  Name: Vishavjeet Khatri    Student ID: 150215234             Date: May-25-2025
  *
- *  Published URL: https://web422-six.vercel.app/
+ *  Published URL: https://web422-esr2.vercel.app/
  ********************************************************************************/
+
+
+
 
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const ListingsDB = require('./ListingAPI/listingsDB'); // class export
-const db = new ListingsDB(); // instantiate
+const ListingsDB = require('./ListingAPI/listingsDB'); 
+const db = new ListingsDB(); 
 
 const app = express();
 app.use(cors());
@@ -29,7 +32,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'API Listening' });
 });
 
-// Initialize DB then start server
+// Initialize DB 1st and then start server
 db.initialize(CONN_STRING)
   .then(() => {
     console.log(' You are sucessfully connected to MongoDb Atlas')
